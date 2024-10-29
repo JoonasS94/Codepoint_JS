@@ -73,6 +73,23 @@
 
 }
 
+/* Peli3 omat tyyliasetukset */
+.peli4 {
+    background-color: rgb(218, 218, 218);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
+    h1, h2, h3
+    {
+        color: #000000;
+    }
+
+}
+
 figcaption
 {
     text-align: center;
