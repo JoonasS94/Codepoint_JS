@@ -8,35 +8,41 @@
 </head>
 <body class="peli4"> <!-- Tässä lisätään luokka "peli4" body-elementtiin -->
 
-    <nav id="HeaderNavigaatio">
-        <ul>
-            <li><a href="paasivu.html">Etusivu</a></li>
-            <br>
-            <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-        </ul>
-    </nav>
+    <header class="fixed-header"> <!-- Lisää header-osa -->
+        <nav id="HeaderNavigaatio">
+            <ul>
+                <li><a href="paasivu.html">Etusivu</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section>
-    <h1>Battlefield 2</h1>
-
-    <figure>
+    <div class="fixed-asideLeft">
         <img src="BF2Kuva.jpg" alt="Battlefield 2" width="250" height="350">
         <figcaption>Battlefield 2 pelin kuvituskuva</figcaption>
-    </figure>
+    </div>
 
-    <h3>Genre: Ammunta</h3>
-    <h3>Julkaisuvuosi: 2005</h3>
-    <h3>Kehittäjä: EA</h3>
-    <h3>Alkuperäinen julkaisualusta: PC (Windows)</h3>
-    <h3>Pelimoottori: Refractor 2</h3>
-    <h3>Metacritic: 91/100</h3>
-</section>
+    <div class="fixed-article">
+        <h3>Genre: Ammunta</h3>
+        <h3>Julkaisuvuosi: 2005</h3>
+        <h3>Kehittäjä: EA</h3>
+    </div>
 
-<div class="fixed-footer"> <!-- Kiinnitetty alaosa -->
-    <h4>Sivuston tekijä: Joonas Sariola</h4>
-    <h4>Sähköposti: joonas.sariola@turku.fi</h4>
-    <h4><a href="https://www.linkedin.com/in/joonas-sariola-a10b4a203">LinkedIn</a></h4>
-</div>
+    <div class="fixed-article2">
+        <h3>Alkuperäinen julkaisualusta: PC (Windows)</h3>
+        <h3>Pelimoottori: Refractor 2</h3>
+        <h3>Metacritic: 91/100</h3>
+    </div>
+
+    <section>
+        <h1>Battlefield 2</h1>
+    </section>
+
+    <div class="fixed-footer"> <!-- Kiinnitetty alaosa -->
+        <h4>Sivuston tekijä: Joonas Sariola</h4>
+        <h4>Sähköposti: joonas.sariola@turku.fi</h4>
+        <h4><a href="https://www.linkedin.com/in/joonas-sariola-a10b4a203">LinkedIn</a></h4>
+    </div>
 
 </body>
 </html>

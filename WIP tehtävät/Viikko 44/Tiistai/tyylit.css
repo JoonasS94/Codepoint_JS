@@ -18,8 +18,8 @@ body
     width: 100%; /* Täyttää koko leveydeltä */
     background-color: rgb(255, 0, 191); /* Taustaväri */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Varjo */
-    z-index: 1000; /* Varmistetaan, että se on muiden elementtien päällä */
-    padding: 10px; /* Tyhjää ylhäällä ja alhaalla */
+    z-index: 1400; /* Varmistetaan, että se on muiden elementtien päällä */
+    padding: 0px; /* Tyhjää ylhäällä ja alhaalla */
     text-align: center; /* Keskitetään teksti */
 }
 
@@ -55,7 +55,7 @@ nav
     height: 60px; /* Aseta korkeus, jotta se voidaan keskittää */
     background-color: #ff00bf; /* Taustaväri navigaatiolle */
     border-bottom: 1px solid #ff00dd; /* Alareunan raja */
-    z-index: 1200; /* Varmistetaan, että navigaatio on aina muiden elementtien päällä */
+    z-index: 1220; /* Varmistetaan, että navigaatio on aina muiden elementtien päällä */
     
     display: flex; /* Flexbox-asettelu */
     justify-content: center; /* Keskittää sisällön vaaka-akselilla */
@@ -96,10 +96,10 @@ nav ul li
 {
     position: fixed;
     top: 550px;
-    left: 575px;
+    left: 590px;
     position: fixed;
     transform: translate(-50%, -50%); /* Siirtää elementin keskelle */
-    width: 300px;
+    width: 325px;
     height: 650px;
     background-color: rgb(0, 255, 13);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -204,7 +204,6 @@ h1, h2, h3, h4
         color: rgb(0, 0, 0);
     }
 
-    /*Tekstin väri*/
     h1
     {
         text-align: center; /* Keskittää tekstin */
@@ -219,11 +218,11 @@ h1, h2, h3, h4
         color: #000000;
     }
 
-        /*Tekstin väri*/
-        h4
-        {
-            color: #ffffff;
-        }
+    /*Tekstin väri*/
+    h4
+    {
+        color: #ffffff;
+    }
 }
 
 /* peli2.html omat tyyliasetukset */
@@ -243,7 +242,7 @@ h1, h2, h3, h4
     {
         text-align: center; /* Keskittää tekstin */
         margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
-        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -35%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
         color: #000000;
     }
 
@@ -252,12 +251,13 @@ h1, h2, h3, h4
     {
         color: #000000;
     }
+    
+    /*Tekstin väri*/
+    h4
+    {
+        color: #ffffff;
+    }
 
-        /*Tekstin väri*/
-        h4
-        {
-            color: #ffffff;
-        }
 }
 
 /* peli3.html omat tyyliasetukset */
@@ -287,11 +287,11 @@ h1, h2, h3, h4
         color: #000000;
     }
 
-        /*Tekstin väri*/
-        h4
-        {
-            color: #ffffff;
-        }
+    /*Tekstin väri*/
+    h4
+    {
+        color: #ffffff;
+    }
 }
 
 /* peli4.html omat tyyliasetukset */
@@ -355,9 +355,9 @@ h1, h2, h3, h4
         color: #000000;
     }
 
-        /*Tekstin väri*/
-        h4
-        {
-            color: #ffffff;
-        }
+    /*Tekstin väri*/
+    h4
+    {
+        color: #ffffff;
+    }
 }
