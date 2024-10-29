@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Varmistetaan, että keho kattaa koko näkymän korkeuden */
+    padding: 60px 0 0; /* Ylhäällä 60px tilaa, ei sivuille eikä alareunaan */
 }
 
 .fixed-header {
@@ -13,7 +14,7 @@ body {
     top: 0; /* Asetetaan yläreunaan */
     left: 0; /* Asetetaan vasemmalle */
     width: 100%; /* Täyttää koko leveydeltä */
-    background-color: white; /* Taustaväri */
+    background-color: rgb(255, 0, 191); /* Taustaväri */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Varjo */
     z-index: 1000; /* Varmistetaan, että se on muiden elementtien päällä */
     padding: 10px; /* Tyhjää ylhäällä ja alhaalla */
@@ -25,12 +26,14 @@ body {
     bottom: 0; /* Asetetaan alareunaan */
     left: 0; /* Asetetaan vasemmalle */
     width: 100%; /* Täyttää koko leveydeltä */
-    background-color: white; /* Taustaväri */
+    background-color: rgb(0, 119, 255); /* Taustaväri */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Varjo */
     z-index: 1000; /* Varmistetaan, että se on muiden elementtien päällä */
     padding: 10px; /* Tyhjää ylhäällä ja alhaalla */
     text-align: center; /* Keskitetään teksti */
 }
+
+
 
 .fixed-header h4, .fixed-footer h4 {
     margin: 0; /* Poistetaan marginaali */
@@ -40,9 +43,9 @@ nav {
     position: fixed; /* Kiinnitetään navigaatio */
     top: 0;
     width: 100%;
-    background-color: #f8f8f8; /* Taustaväri navigaatiolle */
-    border-bottom: 1px solid #ccc; /* Alareunan raja */
-    z-index: 1000; /* Varmistetaan, että navigaatio on muiden elementtien päällä */
+    background-color: #ff00bf; /* Taustaväri navigaatiolle */
+    border-bottom: 1px solid #ff00dd; /* Alareunan raja */
+    z-index: 1200; /* Varmistetaan, että navigaatio on aina muiden elementtien päällä */
 }
 
 nav ul {
@@ -56,7 +59,61 @@ nav ul li {
     margin-right: 20px; /* Väli linkkien välille */
 }
 
+.fixed-asideLeft {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 400px;
+    height: 1000px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    display: inline-block; /* Tämä voi auttaa näkyvyyteen */
+    overflow: visible; /* Sallii elementtien näkyvyyden */
+}
 
+.fixed-article {
+    position: fixed;
+    top: 250px;
+    left: 575px;
+    position: fixed;
+    transform: translate(-50%, -50%); /* Siirtää elementin keskelle */
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 255, 13);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    display: inline-block;
+}
+
+.fixed-article2 {
+    position: fixed;
+    top: 250px;
+    left: 900px;
+    position: fixed;
+    transform: translate(-50%, -50%); /* Siirtää elementin keskelle */
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 119, 255);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+.fixed-asideLeft h1 {
+    color: #000000;
+    margin: 10px 0; /* Jätetään pieni marginaali otsikon ympärille */
+}
+
+.fixed-asideLeft figcaption {
+    margin-top: 10px;
+    color: rgb(0, 0, 0); /* Jos haluat sen näkyvän tummaa taustaa vasten */
+}
 
 
 /*Kuvat*/
@@ -96,7 +153,7 @@ h1, h2, h3, h4 {
 
 /* Yhteystiedot*/
 .yhteystiedot {
-    padding-top: 60px; /* Varmistaa, että sivun sisältö ei mene yhteystietojen päälle */
+
 
     /*Sivun taustaväri*/
     background-color: #747474;
@@ -114,7 +171,7 @@ h1, h2, h3, h4 {
 
     /* kuvaselityksen väri*/
     figcaption {
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
     /*Tekstin väri*/
