@@ -1,0 +1,363 @@
+/*General style settings for the web page.*/
+body
+{
+    /*Space around an HTML element's border.*/
+    margin: 0;
+    /*Flexbox layout template that makes it easier to spread and place elements.*/
+    display: flex;
+    /*Changes the orientation of the child elements of the Flexbox container to vertical.*/
+    flex-direction: column;
+    /*defines the minimum height of the element relative to the height of the browser window.*/
+    min-height: 100vh;
+    /*Amount of space between corner's of HTML element and content in X, Y and Z angles.*/
+    padding: 0 0 0;
+}
+
+/*Top bar style settings*/
+.fixed-header
+{
+    /*Sets the element to a fixed position relative to the browser window.
+    "Fixed" locks to a specific position in the window as requested in task description.*/
+    position: fixed;
+    /*Defines the distance of the element from the top of the window.*/
+    top: 0;
+    left: 0;
+    /*On how big width spreads the top bar.*/ 
+    width: 100%;
+    background-color: rgb(255, 0, 191);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /*Determines how important it is that object is in "front" (always present for user).*/
+    z-index: 1400;
+    padding: 0px;
+    text-align: center;
+}
+
+/*Bottom bar style settings*/
+.fixed-footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 119, 255);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    text-align: center;
+}
+
+.fixed-header h1
+{
+    color: #000000;
+    margin: 0;
+}
+
+.fixed-footer h4
+{
+    color: #ffffff;
+    margin: 0;
+}
+
+/*A semantic HTML element that represents a navigational part of a web page.*/
+nav
+{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #ff00bf;
+    border-bottom: 1px solid #ff00dd;
+    z-index: 1200;
+    display: flex;
+    /*maintains the placement between elements flexibly. Only affects the horizontal direction.*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*Unordered lists style settings*/
+nav ul
+{
+    /*Disables list markers*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/*Style settings for list of items*/
+nav ul li
+{
+    margin-right: 20px; /* Väli linkkien välille */
+}
+
+/*Left bar style settings*/
+.fixed-asideLeft
+{
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 400px;
+    height: 1000px;
+    padding-top: 50px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    /*Sets the element as an inline-block-level element.
+    Gives the designer more flexibility in managing the layout.*/
+    display: inline-block;
+    /*A way to control how the overflow content appears in the element.*/
+    overflow: visible;
+}
+
+/*Custom text bar*/
+.fixed-article
+{
+    position: fixed;
+    top: 550px;
+    left: 590px;
+    position: fixed;
+    /*Transforms element to middle*/
+    transform: translate(-50%, -50%);
+    /*Size of custom text bar*/
+    width: 325px;
+    height: 650px;
+    background-color: rgb(0, 255, 13);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    display: inline-block;
+}
+
+.fixed-article2
+{
+    position: fixed;
+    top: 550px;
+    left: 900px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 650px;
+    background-color: rgb(57, 139, 233);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+.fixed-asideLeft h1
+{
+    color: #000000;
+    margin: 10px 0; /* Jätetään pieni marginaali otsikon ympärille */
+}
+
+/*Picture's description style settings*/
+.fixed-asideLeft figcaption
+{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+/*Pictures style settings*/
+img
+{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+figcaption
+{
+    font-size: 11px;
+    text-align: center;
+}
+
+h1, h2, h3, h4
+{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+/*Main page own style settings*/
+.paasivu
+{
+    background-color: #747474;
+
+    h1
+    {
+        color: #ffffff;
+        margin-top: 5%;
+    }
+
+    h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
+/*Contact info own style settings*/
+.yhteystiedot
+{
+    background-color: #747474;
+
+    h1
+    {
+        color: #ffffff;
+        margin-top: 5%;
+    }
+
+    h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli1.html style setting*/
+.peli1
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        /* Moves text towards down regarding top of the screen.*/
+        margin-top: 8%;
+        /* Moves text towards left regarding center of the screen.*/
+        margin-left: -45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli2.html style setting*/
+.peli2
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-left: -35%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+
+}
+
+/*peli3.html style setting*/
+.peli3
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-left: -45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli4.html style setting*/
+.peli4
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-left: -45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli5.html style setting*/
+.peli5
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-left: -45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
