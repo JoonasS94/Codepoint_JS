@@ -1,0 +1,45 @@
+/* Pääsivun vaalean harmaa taustaväri */
+.paasivu {
+    background-color: #747474; /* Vaalean harmaa */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    h1, h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
+/* Peli1 musta taustaväri */
+.peli1 {
+    background-color: black;
+
+    figcaption
+    {
+        text-align: center;
+        color: white;
+        font-size: 11px;
+    }
+
+    /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
+    h1, h2, h3
+    {
+        color: #ffffff;
+    }
+
+}
+
+/* Kuvat */
+img
+{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* otsikot */
+h1, h2, h3, h4
+{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
