@@ -10,8 +10,27 @@
     }
 }
 
-/* Peli1 musta taustaväri */
+/* Peli1 omat tyyliasetukset */
 .peli1 {
+    background-color: black;
+
+    figcaption
+    {
+        text-align: center;
+        color: white;
+        font-size: 11px;
+    }
+
+    /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
+    h1, h2, h3
+    {
+        color: #ffffff;
+    }
+
+}
+
+/* Peli2 omat tyyliasetukset */
+.peli2 {
     background-color: black;
 
     figcaption
