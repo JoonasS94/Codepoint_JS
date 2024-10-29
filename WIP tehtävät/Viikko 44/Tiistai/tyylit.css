@@ -1,6 +1,7 @@
 /*Yleiset tyyliasetukset*/
 
-body {
+body
+{
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,7 +10,9 @@ body {
     padding: 60px 0 0; /* Ylhäällä 60px tilaa, ei sivuille eikä alareunaan */
 }
 
-.fixed-header {
+.fixed-header
+{
+    list-style: none;
     position: fixed; /* Kiinnitetään yläosaan */
     top: 0; /* Asetetaan yläreunaan */
     left: 0; /* Asetetaan vasemmalle */
@@ -21,7 +24,8 @@ body {
     text-align: center; /* Keskitetään teksti */
 }
 
-.fixed-footer {
+.fixed-footer
+{
     position: fixed; /* Kiinnitetään alaosaan */
     bottom: 0; /* Asetetaan alareunaan */
     left: 0; /* Asetetaan vasemmalle */
@@ -33,38 +37,54 @@ body {
     text-align: center; /* Keskitetään teksti */
 }
 
-
-
-.fixed-header h4, .fixed-footer h4 {
+.fixed-header h1
+{
+    color: #000000;
     margin: 0; /* Poistetaan marginaali */
 }
 
-nav {
-    position: fixed; /* Kiinnitetään navigaatio */
-    top: 0;
+.fixed-footer h4
+{
+    color: #ffffff;
+    margin: 0; /* Poistetaan marginaali */
+}
+
+nav
+{
+    position: relative; /* Muutettu fixed -> relative */
     width: 100%;
+    height: 60px; /* Aseta korkeus, jotta se voidaan keskittää */
     background-color: #ff00bf; /* Taustaväri navigaatiolle */
     border-bottom: 1px solid #ff00dd; /* Alareunan raja */
     z-index: 1200; /* Varmistetaan, että navigaatio on aina muiden elementtien päällä */
+    
+    display: flex; /* Flexbox-asettelu */
+    justify-content: center; /* Keskittää sisällön vaaka-akselilla */
+    align-items: center; /* Keskittää sisällön pystyakselilla */
 }
 
-nav ul {
+nav ul
+{
     list-style-type: none; /* Poistetaan luettelomerkit */
     margin: 0; /* Poistetaan marginaali */
     padding: 0; /* Poistetaan tyhjät tilat */
+    display: flex; /* Flexbox-asettelu */
 }
 
-nav ul li {
-    display: inline; /* Näytetään linkit vierekkäin */
+nav ul li
+{
     margin-right: 20px; /* Väli linkkien välille */
 }
 
-.fixed-asideLeft {
+
+.fixed-asideLeft
+{
     position: fixed;
     top: 25px;
     left: 0;
     width: 400px;
     height: 1000px;
+    padding-top: 50px;
     background-color: rgb(255, 0, 0);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -73,14 +93,15 @@ nav ul li {
     overflow: visible; /* Sallii elementtien näkyvyyden */
 }
 
-.fixed-article {
+.fixed-article
+{
     position: fixed;
-    top: 250px;
+    top: 550px;
     left: 575px;
     position: fixed;
     transform: translate(-50%, -50%); /* Siirtää elementin keskelle */
     width: 300px;
-    height: 300px;
+    height: 650px;
     background-color: rgb(0, 255, 13);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -88,14 +109,15 @@ nav ul li {
     display: inline-block;
 }
 
-.fixed-article2 {
+.fixed-article2
+{
     position: fixed;
-    top: 250px;
+    top: 550px;
     left: 900px;
     position: fixed;
     transform: translate(-50%, -50%); /* Siirtää elementin keskelle */
     width: 300px;
-    height: 300px;
+    height: 650px;
     background-color: rgb(0, 119, 255);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -105,19 +127,22 @@ nav ul li {
 
 
 
-.fixed-asideLeft h1 {
+.fixed-asideLeft h1
+{
     color: #000000;
     margin: 10px 0; /* Jätetään pieni marginaali otsikon ympärille */
 }
 
-.fixed-asideLeft figcaption {
+.fixed-asideLeft figcaption
+{
     margin-top: 10px;
     color: rgb(0, 0, 0); /* Jos haluat sen näkyvän tummaa taustaa vasten */
 }
 
 
 /*Kuvat*/
-img {
+img
+{
     /*Asettelu*/
     display: block;
     margin: 0 auto;
@@ -125,7 +150,8 @@ img {
 }
 
 /*Kuvaselitykset*/
-figcaption {
+figcaption
+{
     /*Fontti*/
     font-size: 11px;
     /*Tekstin sijoitus*/
@@ -133,7 +159,8 @@ figcaption {
 }
 
 /*Tekstit*/
-h1, h2, h3, h4 {
+h1, h2, h3, h4
+{
     /*Fontti*/
     font-family: Arial, sans-serif;
     /*Tekstin sijoitus*/
@@ -141,105 +168,137 @@ h1, h2, h3, h4 {
 }
 
 /* Pääsivu omat tyyliasetukset*/
-.paasivu {
+.paasivu
+{
     /*Sivun taustaväri*/
     background-color: #747474;
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #ffffff;
     }
 }
 
 /* Yhteystiedot*/
-.yhteystiedot {
-
-
+.yhteystiedot
+{
     /*Sivun taustaväri*/
     background-color: #747474;
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #ffffff;
     }
 }
 
 /* peli1.html omat tyyliasetukset */
-.peli1 {
+.peli1
+{
     /*Sivun taustaväri*/
-    background-color: black;
+    background-color: rgb(255, 166, 0);
 
     /* kuvaselityksen väri*/
-    figcaption {
+    figcaption
+    {
         color: rgb(0, 0, 0);
     }
 
     /*Tekstin väri*/
-    h1, h2, h3 {
-        color: #ffffff;
+    h1
+    {
+        text-align: center; /* Keskittää tekstin */
+        margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        color: #000000;
     }
+
+    /*Tekstin väri*/
+    h2, h3
+    {
+        color: #000000;
+    }
+
+        /*Tekstin väri*/
+        h4
+        {
+            color: #ffffff;
+        }
 }
 
 /* peli2.html omat tyyliasetukset */
-.peli2 {
+.peli2
+{
     /*Sivun taustaväri*/
     background-color: black;
 
     /* kuvaselityksen väri*/
-    figcaption {
+    figcaption
+    {
         color: white;
     }
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #ffffff;
     }
 }
 
 /* peli3.html omat tyyliasetukset */
-.peli3 {
+.peli3
+{
     /*Sivun taustaväri*/
     background-color: rgb(250, 112, 0);
 
     /* kuvaselityksen väri*/
-    figcaption {
+    figcaption
+    {
         color: white;
     }
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #ffffff;
     }
 }
 
 /* peli4.html omat tyyliasetukset */
-.peli4 {
+.peli4
+{
     /*Sivun taustaväri*/
     background-color: rgb(218, 218, 218);
 
     /* kuvaselityksen väri*/
-    figcaption {
+    figcaption
+    {
         color: rgb(0, 0, 0);
     }
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #000000;
     }
 }
 
 /* peli5.html omat tyyliasetukset */
-.peli5 {
+.peli5
+{
     /*Sivun taustaväri*/
     background-color: rgb(44, 44, 44);
 
     /* kuvaselityksen väri*/
-    figcaption {
+    figcaption
+    {
         color: rgb(255, 255, 255);
     }
 
     /*Tekstin väri*/
-    h1, h2, h3 {
+    h1, h2, h3
+    {
         color: #ffffff;
     }
 }
