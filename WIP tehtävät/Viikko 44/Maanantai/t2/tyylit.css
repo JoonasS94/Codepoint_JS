@@ -10,15 +10,25 @@
     }
 }
 
+/* Yhteystiedot vaalean harmaa taustaväri */
+.yhteystiedot {
+    background-color: #747474; /* Vaalean harmaa */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    h1, h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
 /* Peli1 omat tyyliasetukset */
 .peli1 {
     background-color: black;
 
     figcaption
     {
-        text-align: center;
         color: white;
-        font-size: 11px;
     }
 
     /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
@@ -35,9 +45,7 @@
 
     figcaption
     {
-        text-align: center;
         color: white;
-        font-size: 11px;
     }
 
     /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
@@ -46,6 +54,29 @@
         color: #ffffff;
     }
 
+}
+
+/* Peli3 omat tyyliasetukset */
+.peli3 {
+    background-color: rgb(250, 112, 0);
+
+    figcaption
+    {
+        color: white;
+    }
+
+    /* Tekstin tyyli h2 ja h3 elementeille peli1.html sivulla*/
+    h1, h2, h3
+    {
+        color: #ffffff;
+    }
+
+}
+
+figcaption
+{
+    text-align: center;
+    font-size: 11px;
 }
 
 /* Kuvat */

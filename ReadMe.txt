@@ -1,0 +1,1 @@
+Joonas Sariolan syksy 2024 Codepoint tehtävät, WorkIn Progress kansiossa keskeneräisiä asioita, Tehtäväpalautukset kansiossa valmiit/ palautetut tehtävät.
