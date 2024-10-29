@@ -12,7 +12,6 @@ body
 
 .fixed-header
 {
-    list-style: none;
     position: fixed; /* Kiinnitetään yläosaan */
     top: 0; /* Asetetaan yläreunaan */
     left: 0; /* Asetetaan vasemmalle */
@@ -51,7 +50,7 @@ body
 
 nav
 {
-    position: relative; /* Muutettu fixed -> relative */
+    position: fixed; /* Muutettu fixed -> relative */
     width: 100%;
     height: 60px; /* Aseta korkeus, jotta se voidaan keskittää */
     background-color: #ff00bf; /* Taustaväri navigaatiolle */
@@ -231,45 +230,7 @@ h1, h2, h3, h4
 .peli2
 {
     /*Sivun taustaväri*/
-    background-color: black;
-
-    /* kuvaselityksen väri*/
-    figcaption
-    {
-        color: white;
-    }
-
-    /*Tekstin väri*/
-    h1, h2, h3
-    {
-        color: #ffffff;
-    }
-}
-
-/* peli3.html omat tyyliasetukset */
-.peli3
-{
-    /*Sivun taustaväri*/
-    background-color: rgb(250, 112, 0);
-
-    /* kuvaselityksen väri*/
-    figcaption
-    {
-        color: white;
-    }
-
-    /*Tekstin väri*/
-    h1, h2, h3
-    {
-        color: #ffffff;
-    }
-}
-
-/* peli4.html omat tyyliasetukset */
-.peli4
-{
-    /*Sivun taustaväri*/
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(255, 166, 0);
 
     /* kuvaselityksen väri*/
     figcaption
@@ -278,27 +239,125 @@ h1, h2, h3, h4
     }
 
     /*Tekstin väri*/
-    h1, h2, h3
+    h1
+    {
+        text-align: center; /* Keskittää tekstin */
+        margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        color: #000000;
+    }
+
+    /*Tekstin väri*/
+    h2, h3
     {
         color: #000000;
     }
+
+        /*Tekstin väri*/
+        h4
+        {
+            color: #ffffff;
+        }
+}
+
+/* peli3.html omat tyyliasetukset */
+.peli3
+{
+    /*Sivun taustaväri*/
+    background-color: rgb(255, 166, 0);
+
+    /* kuvaselityksen väri*/
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    /*Tekstin väri*/
+    h1
+    {
+        text-align: center; /* Keskittää tekstin */
+        margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        color: #000000;
+    }
+
+    /*Tekstin väri*/
+    h2, h3
+    {
+        color: #000000;
+    }
+
+        /*Tekstin väri*/
+        h4
+        {
+            color: #ffffff;
+        }
+}
+
+/* peli4.html omat tyyliasetukset */
+.peli4
+{
+    /*Sivun taustaväri*/
+    background-color: rgb(255, 166, 0);
+
+    /* kuvaselityksen väri*/
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    /*Tekstin väri*/
+    h1
+    {
+        text-align: center; /* Keskittää tekstin */
+        margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        color: #000000;
+    }
+
+    /*Tekstin väri*/
+    h2, h3
+    {
+        color: #000000;
+    }
+
+        /*Tekstin väri*/
+        h4
+        {
+            color: #ffffff;
+        }
 }
 
 /* peli5.html omat tyyliasetukset */
 .peli5
 {
     /*Sivun taustaväri*/
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(255, 166, 0);
 
     /* kuvaselityksen väri*/
     figcaption
     {
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
     }
 
     /*Tekstin väri*/
-    h1, h2, h3
+    h1
     {
-        color: #ffffff;
+        text-align: center; /* Keskittää tekstin */
+        margin-top: 5%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        margin-left: -45%; /* Siirtää tekstiä hieman vasemmalle suhteessa keskitykseen */
+        color: #000000;
     }
+
+    /*Tekstin väri*/
+    h2, h3
+    {
+        color: #000000;
+    }
+
+        /*Tekstin väri*/
+        h4
+        {
+            color: #ffffff;
+        }
 }
