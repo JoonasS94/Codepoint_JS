@@ -8,40 +8,51 @@
     <!--Linking to CSS-file-->
     <link rel="stylesheet" href="tyylit.css">
 </head>
-<body class="peli4"> <!-- Tässä lisätään luokka "peli4" body-elementtiin -->
+<!--Class that defines style for this page-->
+<body class="peli4">
 
-    <header class="fixed-header"> <!-- Lisää header-osa -->
-        <nav id="HeaderNavigation">
-            <ul>
-                <li><a href="paasivu.html">Etusivu</a></li>
-                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+<h1>Battlefield 2</h1>
 
-    <div class="fixed-asideLeft">
-        <img src="BF2Kuva.jpg" alt="Battlefield 2" width="250" height="350">
+<!--Top bar-->
+<div class="grid-container-header">
+    <div class="grid-item">
+        <p><a href="paasivu.html">Etusivu</a></p>
+        <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+    </div>
+</div>
+
+<!--Bottom bar-->
+<div class="grid-container-footer">
+    <div class="grid-item">
+        <p>Sivuston tekijä: Joonas Sariola</p>
+        <p>Sähköposti: joonas.sariola@turku.fi</p>
+        <p><a href="https://www.linkedin.com/in/joonas-sariola-a10b4a203">LinkedIn</a></p>
+    </div>
+</div>
+
+<!--Left side bar-->
+<div class="grid-container-aside-left">
+    <div class="grid-item">
+        <img src="BF2Kuva.jpg" alt="Battlefield 2" width="60%" height="40%">
         <figcaption>Battlefield 2 pelin kuvituskuva</figcaption>
     </div>
+</div>
 
-    <div class="fixed-article">
+<div class="grid-container-article1">
+    <div class="grid-item">
         <h3>Genre: Ammunta</h3>
         <h3>Julkaisuvuosi: 2005</h3>
         <h3>Kehittäjä: EA</h3>
     </div>
+</div>
 
-    <div class="fixed-article2">
-        <h3>Alkuperäinen julkaisualusta: PC (Windows)</h3>
+<div class="grid-container-article2">
+    <div class="grid-item">
+        <h3>Alkuperäinen julkaisualusta: Windows (PC)</h3>
         <h3>Pelimoottori: Refractor 2</h3>
         <h3>Metacritic: 91/100</h3>
     </div>
-
-    <!--Bottom bar-->
-    <div class="fixed-footer">
-        <h4>Sivuston tekijä: Joonas Sariola</h4>
-        <h4>Sähköposti: joonas.sariola@turku.fi</h4>
-        <h4><a href="https://www.linkedin.com/in/joonas-sariola-a10b4a203">LinkedIn</a></h4>
-    </div>
+</div>
 
 </body>
 </html>

@@ -49,6 +49,10 @@ body
     text-align: fixed;
     line-height: 0;
     text-emphasis-position: 0;
+    p
+    {
+        text-align: center;
+    }
 }
 
 .grid-container-aside-left
@@ -172,12 +176,6 @@ h1, h2, h3, h4
     figcaption
     {
         color: rgb(0, 0, 0);
-    }
-
-    p
-    {
-        text-align: center;
-
     }
 
     h1
