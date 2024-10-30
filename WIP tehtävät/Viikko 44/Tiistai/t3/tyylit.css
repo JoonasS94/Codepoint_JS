@@ -1,0 +1,382 @@
+/*General style settings for the web page.*/
+body
+{
+    /*Space around an HTML element's border.*/
+    margin: 0;
+    /*Flexbox layout template that makes it easier to spread and place elements.*/
+    display: flex;
+    /*Changes the orientation of the child elements of the Flexbox container to vertical.*/
+    flex-direction: column;
+    /*defines the minimum height of the element relative to the height of the browser window.*/
+    min-height: 100vh;
+    /*Amount of space between corner's of HTML element and content in X, Y and Z angles.*/
+    padding: 0 0 0;
+}
+
+/*Top bar*/
+.grid-container-header
+{
+    /*Converts an element's box space to a cubes.*/
+    display: grid;
+    /*Specifies the size of the grid columns*/
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 5.5%;
+
+    position: fixed;
+    left: 0;
+
+    background-color: rgb(255, 0, 191);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 0;
+}
+
+/*Bottom bar*/
+.grid-container-footer
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 10%;
+
+    position: fixed;
+    top: 95%;
+
+    background-color: rgb(0, 119, 255);
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    text-align: fixed;
+    line-height: 0;
+    text-emphasis-position: 0;
+    p
+    {
+        text-align: center;
+    }
+}
+
+/*Left side bar*/
+.grid-container-aside-left
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 18%;
+    height: 90%;
+
+    position: fixed;
+    top: 50px;
+    left: 0px;
+
+    background-color: #b80000;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grid-container-article1
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 20%;
+    height: 65%;
+
+    position: fixed;
+    top: 22%;
+    left: 20%;
+
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grid-container-article2
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 18%;
+    height: 65%;
+
+    position: fixed;
+    top: 22%;
+    left: 40%;
+
+    background-color: #0099ff;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*Pictures style settings*/
+img
+{
+    padding: 5%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+figcaption
+{
+    font-size: 1rem;
+    text-align: center;
+}
+
+h1, h2, h3, h4
+{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+/*Main page own style settings*/
+.paasivu
+{
+    background-color: #747474;
+
+    h1
+    {
+        color: #ffffff;
+        margin-top: 5%;
+    }
+
+    h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
+/*Contact info own style settings*/
+.yhteystiedot
+{
+    background-color: #747474;
+
+    h1
+    {
+        color: #ffffff;
+        margin-top: 5%;
+    }
+
+    h2, h3
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli1.html style setting*/
+.peli1
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        /* Moves text towards down regarding top of the screen.*/
+        margin-top: 8%;
+        /* Moves text towards left regarding center of the screen.*/
+        margin-left: -45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli2.html style setting*/
+.peli2
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-left: -35%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+
+}
+
+/*peli3.html style setting*/
+.peli3
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-right: 45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli4.html style setting*/
+.peli4
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-right: 45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+/*peli5.html style setting*/
+.peli5
+{
+    background-color: rgb(255, 166, 0);
+
+    figcaption
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    h1
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-right: 45%;
+        color: #000000;
+    }
+
+    h2, h3
+    {
+        color: #000000;
+    }
+
+    h4
+    {
+        color: #ffffff;
+    }
+}
+
+
+#popupBox {
+    display: none; /* Piilotettu oletuksena */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Kiinteä leveys */
+    max-width: 90%; /* Maksimi leveys, jotta se ei veny liikaa pienissä näytöissä */
+    background-color: white; /* Varmista, että tausta on valkoinen */
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center; /* Keskittää tekstin */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Kaksi saraketta */
+}
+
+.grid-item {
+    padding: 10px; /* Lisää tilaa jokaisen ruudun ympärille */
+    border-radius: 4px; /* Pyöristetyt kulmat */
+}
+
+
+label {
+    display: block; /* Varmistaa, että etiketit ovat omilla riveillään */
+    text-align: left; /* Keskittää tekstin */
+    margin: 0px 20px; /* Lisää tilaa ylle ja alle */
+}
+
+input[type="checkbox"]
+{
+    margin-right: 97.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
+}
+
+input[type="text"]
+{
+    width: 200px; /* Kenttien leveys, voit säätää tarvittaessa */
+    padding: 5px;
+    margin: 5px 20px; /* Lisää tilaa kenttien väliin ja keskittää ne */
+    border: 1px solid #ffffff; /* Rajoitus */
+    border-radius: 4px; /* Pyöristetyt kulmat */
+    display: block; /* Varmistaa, että kenttä on lohkotason elementti */
+    text-align: 20px;
+}
+
+
+/* Napin tyylit */
+button
+{
+    padding: 5px 10px; /* Mukautettu padding */
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745; /* Vihreä tausta */
+    color: white; /* Valkoinen teksti */
+    cursor: pointer; /* Muuttaa kursoria */
+    width: 100px; /* Määritetty leveys */
+    margin: 10px 20px; /* Lisää tilaa painikkeen ylle ja keskittää sen */
+    display: block; /* Varmistaa, että painike on lohkotason elementti */
+}
+

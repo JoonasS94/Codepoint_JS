@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title that's the page's name shown on browser tab-->
+    <title>Lisää uusi videopeli</title>
+    <!--Linking to CSS-file-->
+    <link rel="stylesheet" href="tyylit.css">
+</head>
+<!--Class that defines style for this page-->
+<body class="yhteystiedot">
+
+<!--Top bar-->
+<div class="grid-container-header">
+    <div class="grid-item">
+        <p><a href="paasivu.html">Etusivu</a></p>
+        <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+    </div>
+</div>
+
+<!--Bottom bar-->
+<div class="grid-container-footer">
+    <div class="grid-item">
+        <p>Sivuston tekijä: Joonas Sariola</p>
+        <p>Sähköposti: joonas.sariola@turku.fi</p>
+        <p><a href="https://www.linkedin.com/in/joonas-sariola-a10b4a203">LinkedIn</a></p>
+    </div>
+</div>
+
+<!--Header of page-->
+<h1>Lisää uusi videopeli</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<label for="name">Game's name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="replayed">Have you replayed the game?</label>
+<input type="checkbox" id="replayed" name="replayed">
+
+<label for="genre">Genre:</label>
+<input type="text" id="genre" name="genre" required>
+
+<label for="releaseYear">Release year:</label>
+<input type="text" id="releaseYear" name="releaseYear" required>
+
+<label for="developer">Developer:</label>
+<input type="text" id="developer" name="developer" required>
+
+<label for="platform">Original release platform:</label>
+<input type="text" id="platform" name="platform" required>
+
+<label for="engine">Game engine:</label>
+<input type="text" id="engine" name="engine" required>
+
+<label for="review">Metacritic grade:</label>
+<input type="text" id="review" name="review" required>
+
+<button type="button" id="submitButton">OK</button>
+
+<!-- Valkoinen laatikko -->
+<div id="popupBox">
+    <div class="grid-container">
+        <div class="grid-item" id="nameDisplay"></div>
+        <div class="grid-item" id="replayedDisplay"></div>
+        <div class="grid-item" id="genreDisplay"></div>
+        <div class="grid-item" id="releaseYearDisplay"></div>
+        <div class="grid-item" id="developerDisplay"></div>
+        <div class="grid-item" id="platformDisplay"></div>
+        <div class="grid-item" id="engineDisplay"></div>
+        <div class="grid-item" id="ratingDisplay"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const popupBox = document.getElementById('popupBox');
+        
+        document.getElementById('submitButton').addEventListener('click', function ()
+        {
+            popupBox.style.display = 'block'; // Näytä laatikko
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
