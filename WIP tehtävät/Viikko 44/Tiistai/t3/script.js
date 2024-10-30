@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hae kenttien arvot
         const nameValue = document.getElementById('name').value;
         const replayedValue = document.getElementById('replayed').checked ? 'Kyllä' : 'Ei'; // Muista käyttää oikeaa ID:tä
-        const genreValue = document.getElementById('genre').value;
+
+        // Hae valittu genre-arvo
+        const genreValue = document.querySelector('input[name="genre"]:checked')?.value || "Ei valittu";
+        
         const releaseYearValue = document.getElementById('releaseYear').value;
         const developerValue = document.getElementById('developer').value;
         const platformValue = document.getElementById('platform').value;
