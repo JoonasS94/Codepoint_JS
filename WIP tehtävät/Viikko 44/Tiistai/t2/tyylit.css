@@ -13,155 +13,105 @@ body
     padding: 0 0 0;
 }
 
-/*Top bar style settings*/
-.fixed-header
+.grid-container-header
 {
-    /*Sets the element to a fixed position relative to the browser window.
-    "Fixed" locks to a specific position in the window as requested in task description.*/
-    position: fixed;
-    /*Defines the distance of the element from the top of the window.*/
-    top: 0;
-    left: 0;
-    /*On how big width spreads the top bar.*/ 
+    display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
+    height: 5.5%;
+
+    /* Sijainnin hallinta */
+    position: fixed; /* Muuta "absolute" tai "fixed" tarpeen mukaan */
+    left: 0; /* Säädä sijaintia vasemmasta reunasta */
+
     background-color: rgb(255, 0, 191);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /*Determines how important it is that object is in "front" (always present for user).*/
-    z-index: 1400;
-    padding: 0px;
-    text-align: center;
-}
-
-/*Bottom bar style settings*/
-.fixed-footer
-{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(0, 119, 255);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px;
-    text-align: center;
-}
-
-.fixed-header h1
-{
-    color: #000000;
-    margin: 0;
-}
-
-.fixed-footer h4
-{
-    color: #ffffff;
-    margin: 0;
-}
-
-/*A semantic HTML element that represents a navigational part of a web page.*/
-nav
-{
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: #ff00bf;
-    border-bottom: 1px solid #ff00dd;
-    z-index: 1200;
-    display: flex;
-    /*maintains the placement between elements flexibly. Only affects the horizontal direction.*/
-    justify-content: center;
-    align-items: center;
-}
-
-/*Unordered lists style settings*/
-nav ul
-{
-    /*Disables list markers*/
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-/*Style settings for list of items*/
-nav ul li
-{
-    margin-right: 20px; /* Väli linkkien välille */
-}
-
-/*Left bar style settings*/
-.fixed-asideLeft
-{
-    position: fixed;
-    top: 25px;
-    left: 0;
-    width: 400px;
-    height: 1000px;
-    padding-top: 50px;
-    background-color: rgb(255, 0, 0);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-    /*Sets the element as an inline-block-level element.
-    Gives the designer more flexibility in managing the layout.*/
-    display: inline-block;
-    /*A way to control how the overflow content appears in the element.*/
-    overflow: visible;
-}
-
-/*Custom text bar*/
-.fixed-article
-{
-    position: fixed;
-    top: 550px;
-    left: 590px;
-    position: fixed;
-    /*Transforms element to middle*/
-    transform: translate(-50%, -50%);
-    /*Size of custom text bar*/
-    width: 325px;
-    height: 650px;
-    background-color: rgb(0, 255, 13);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-    display: inline-block;
-}
-
-.fixed-article2
-{
-    position: fixed;
-    top: 550px;
-    left: 900px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 650px;
-    background-color: rgb(57, 139, 233);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-    display: inline-block;
-}
-
-
-
-.fixed-asideLeft h1
-{
-    color: #000000;
-    margin: 10px 0; /* Jätetään pieni marginaali otsikon ympärille */
-}
-
-/*Picture's description style settings*/
-.fixed-asideLeft figcaption
-{
-    margin-top: 10px;
     color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 0;
+}
+
+.grid-container-footer
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 10%;
+
+    /* Sijainnin hallinta */
+    position: fixed; /* Muuta "absolute" tai "fixed" tarpeen mukaan */
+    top: 95%; /* Säädä sijaintia vasemmasta reunasta */
+
+    background-color: rgb(0, 119, 255);
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    text-align: fixed;
+    line-height: 0;
+    text-emphasis-position: 0;
+}
+
+.grid-container-aside-left
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 18%;
+    height: 90%;
+
+    /* Sijainnin hallinta */
+    position: fixed; /* Muuta "absolute" tai "fixed" tarpeen mukaan */
+    top: 50px; /* Säädä sijaintia yläreunasta */
+    left: 0px; /* Säädä sijaintia vasemmasta reunasta */
+
+    background-color: #b80000;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grid-container-article1
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 20%;
+    height: 65%;
+
+    /* Sijainnin hallinta */
+    position: fixed; /* Muuta "absolute" tai "fixed" tarpeen mukaan */
+    top: 22%; /* Säädä sijaintia yläreunasta */
+    left: 20%; /* Säädä sijaintia vasemmasta reunasta */
+
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grid-container-article2
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 18%;
+    height: 65%;
+
+    /* Sijainnin hallinta */
+    position: fixed; /* Muuta "absolute" tai "fixed" tarpeen mukaan */
+    top: 22%; /* Säädä sijaintia yläreunasta */
+    left: 40%; /* Säädä sijaintia vasemmasta reunasta */
+
+    background-color: #0099ff;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /*Pictures style settings*/
 img
 {
+    padding: 5%;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
@@ -169,7 +119,7 @@ img
 
 figcaption
 {
-    font-size: 11px;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -222,6 +172,12 @@ h1, h2, h3, h4
     figcaption
     {
         color: rgb(0, 0, 0);
+    }
+
+    p
+    {
+        text-align: center;
+
     }
 
     h1
