@@ -50,9 +50,8 @@
             $query->bindParam(':id', $next_free_id);
             $query->bindParam(':tilan_nimi', $tilan_nimi);
             $query->execute();
-            // Ohjataan käyttäjä takaisin sivulle
             header("Location: " . $_SERVER['PHP_SELF']);
-            exit(); // Lopetetaan nykyinen skripti
+            exit();
         } catch (PDOException $e) {
             die("VIRHE: " . $e->getMessage());
         }
@@ -67,9 +66,51 @@
             $query = $yhteys->prepare($sql_lause);
             $query->bindParam(':id', $poista_tila_id);
             $query->execute();
-            // Ohjataan käyttäjä takaisin sivulle
             header("Location: " . $_SERVER['PHP_SELF']);
-            exit(); // Lopetetaan nykyinen skripti
+            exit();
+        } catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+        }
+    }
+
+    // Lisää uusi varaaja
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['varaajan_nimi']) && !empty($_POST['varaajan_nimi'])) {
+        $varaajan_nimi = $_POST['varaajan_nimi'];
+
+        // Etsi pienin vapaa ID varaajille
+        $find_min_free_id_varaa = "SELECT MIN(t1.id + 1) AS next_free_id
+                                   FROM varaajat t1
+                                   LEFT JOIN varaajat t2 ON t1.id + 1 = t2.id
+                                   WHERE t2.id IS NULL";
+        $query = $yhteys->prepare($find_min_free_id_varaa);
+        $query->execute();
+        $next_free_id_varaa = $query->fetchColumn();
+
+        // Asetetaan uusi ID varaajalle manuaalisesti
+        $sql_lause = "INSERT INTO varaajat (id, varaajan_nimi) VALUES (:id, :varaajan_nimi)";
+        try {
+            $query = $yhteys->prepare($sql_lause);
+            $query->bindParam(':id', $next_free_id_varaa);
+            $query->bindParam(':varaajan_nimi', $varaajan_nimi);
+            $query->execute();
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit();
+        } catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+        }
+    }
+
+    // Poista varaaja
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['poista_varaa_id']) && !empty($_POST['poista_varaa_id'])) {
+        $poista_varaa_id = $_POST['poista_varaa_id'];
+
+        $sql_lause = "DELETE FROM varaajat WHERE id = :id";
+        try {
+            $query = $yhteys->prepare($sql_lause);
+            $query->bindParam(':id', $poista_varaa_id);
+            $query->execute();
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit();
         } catch (PDOException $e) {
             die("VIRHE: " . $e->getMessage());
         }
@@ -146,7 +187,23 @@
     <button type="submit">Poista tila</button>
 </form>
 
-<h1>Tämä on jo perinteistä HMTL:ää.</h1>
+<!-- Lomake uuden varaajan lisäämiseksi -->
+<h2>Lisää uusi varaaja:</h2>
+<form method="POST" action="">
+    <label for="varaajan_nimi">Varaajan nimi:</label>
+    <input type="text" id="varaajan_nimi" name="varaajan_nimi" required>
+    <button type="submit">Lisää varaaja</button>
+</form>
+
+<!-- Lomake varaajan poistamiseksi -->
+<h2>Poista varaaja:</h2>
+<form method="POST" action="">
+    <label for="poista_varaa_id">Varaajan ID:</label>
+    <input type="number" id="poista_varaa_id" name="poista_varaa_id" required>
+    <button type="submit">Poista varaaja</button>
+</form>
+
+<h1>Tämä on jo perinteistä HTML:ää.</h1>
 <h1>- Joonas</h1>
 
 </body>
