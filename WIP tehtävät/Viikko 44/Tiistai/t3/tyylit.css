@@ -342,6 +342,22 @@ h1, h2, h3, h4
     border-radius: 4px; /* Pyöristetyt kulmat */
 }
 
+/* Siirrä checkmark ja neliö oikealle */
+#checkmark {
+    font-size: 24px; /* Voit säätää kokoa tarpeen mukaan */
+    margin-left: 5px; /* Lisää marginaalia vasemmalle */
+    
+}
+
+/* Muokkaa grid-itemBox -luokkaa */
+.grid-itemBox {
+    padding: 10px; /* Lisää tilaa jokaisen ruudun ympärille */
+    border-radius: 4px; /* Pyöristetyt kulmat */
+    position: relative; /* Anna sijainti suhteessa muuhun sisältöön */
+    left: 50%; /* Aseta vasemman reunan sijainti keskelle */
+    transform: translateX(20%); /* Siirrä 20% oikealle */
+    top: 25%
+}
 
 label {
     display: block; /* Varmistaa, että etiketit ovat omilla riveillään */
@@ -351,9 +367,15 @@ label {
 
 input[type="checkbox"]
 {
-    margin-right: 97.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
+    margin-right: 96%;
     margin-bottom: 20px;
 }
+
+#checkmark {
+    font-size: 24px; /* Voit säätää kokoa tarpeen mukaan */
+    margin-left: 10px; /* Lisää marginaalia tarvittaessa */
+}
+
 
 input[type="radio"]
 {

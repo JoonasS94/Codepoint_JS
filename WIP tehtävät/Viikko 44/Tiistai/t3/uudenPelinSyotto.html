@@ -55,7 +55,11 @@
 <input type="text" id="name" name="name" required>
 
 <label for="replayed">Have you replayed the game?</label>
-<input type="checkbox" id="replayed" name="replayed">
+
+<label>
+    <input type="checkbox" id="replayed" onchange="updateCheckmark()">
+    <span id="checkmark"></span>
+</label>
 
 
 <label for="genre">Genre:</label>
@@ -104,14 +108,14 @@
 
 <button type="button" id="submitButton">OK</button>
 
-<!-- Valkoinen laatikko -->
+<!-- Valkoinen pop-up laatikko -->
 <div id="popupBox">
     <div class="grid-container">
         <div class="grid-item" id="nameDisplay"></div>
-        <div class="grid-item" id="replayedDisplay"></div>
-        <div class="grid-item" id="genreDisplay"></div>
-        <div class="grid-item" id="releaseDateDisplay"></div>
+        <div class="grid-itemBox" id="replayedDisplay"></div>
         <div class="grid-item" id="developerDisplay"></div>
+        <div class="grid-item" id="releaseDateDisplay"></div>
+        <div class="grid-item" id="genreDisplay"></div>
         <div class="grid-item" id="platformDisplay"></div>
         <div class="grid-item" id="engineDisplay"></div>
         <div class="grid-item" id="ratingDisplay"></div>
