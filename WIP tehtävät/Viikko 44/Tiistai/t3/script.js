@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const releaseDateValue = formatDateToFinnish(document.getElementById('releaseDate').value);
         
         const developerValue = document.getElementById('developer').value;
+
         const platformValue = document.getElementById('platform').value;
+        
         const engineValue = document.getElementById('engine').value;
         const ratingValue = document.getElementById('review').value;
 

@@ -384,6 +384,17 @@ input[type="date"]
     text-align: 20px;
 }
 
+select
+{
+    width: 200px; /* Kenttien leveys, voit säätää tarvittaessa */
+    padding: 5px;
+    margin: 8px 20px; /* Lisää tilaa kenttien väliin ja keskittää ne */
+    border: 1px solid #ffffff; /* Rajoitus */
+    border-radius: 4px; /* Pyöristetyt kulmat */
+    display: block; /* Varmistaa, että kenttä on lohkotason elementti */
+    text-align: 20px;
+}
+
 /* Napin tyylit */
 button
 {

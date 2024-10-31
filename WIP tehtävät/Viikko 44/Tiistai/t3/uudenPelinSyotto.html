@@ -76,25 +76,24 @@
 <label for="genre-toimintahiippailu">Toimintahiippailu</label>
 <input id="genre-toimintahiippailu" type="radio" name="genre" value="Toimintahiippailu" />
 
-
-
-
-
-
-
-
-
-
-
-
 <label for="releaseDate">Release date:</label>
 <input type="date" id="releaseDate" name="releaseDate" required>
 
 <label for="developer">Developer:</label>
 <input type="text" id="developer" name="developer" required>
 
+
+
+
 <label for="platform">Original release platform:</label>
-<input type="text" id="platform" name="platform" required>
+<select id="platform" name="platform" required>
+    <option value="">Select platform</option>
+    <option value="Windows (PC)">Windows (PC)</option>
+    <option value="PlayStation 2">PlayStation 2</option>
+</select>
+
+
+
 
 <label for="engine">Game engine:</label>
 <input type="text" id="engine" name="engine" required>
