@@ -2,23 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupBox = document.getElementById('popupBox');
 
     const nameDisplay = document.getElementById('nameDisplay');
-    const replayedDisplay = document.getElementById('replayedDisplay'); // Oikea ID
+    const replayedDisplay = document.getElementById('replayedDisplay');
     const genreDisplay = document.getElementById('genreDisplay');
-    const releaseYearDisplay = document.getElementById('releaseYearDisplay');
+    const releaseDateDisplay = document.getElementById('releaseDateDisplay');
     const developerDisplay = document.getElementById('developerDisplay');
     const platformDisplay = document.getElementById('platformDisplay');
     const engineDisplay = document.getElementById('engineDisplay');
     const ratingDisplay = document.getElementById('ratingDisplay');
 
+    // Päivämäärän muotoilufunktio
+    function formatDateToFinnish(dateString) {
+        if (!dateString) return "Ei valittu";
+        const [year, month, day] = dateString.split("-");
+        return `${day}.${month}.${year}`;
+    }
+
     document.getElementById('submitButton').addEventListener('click', function () {
         // Hae kenttien arvot
         const nameValue = document.getElementById('name').value;
-        const replayedValue = document.getElementById('replayed').checked ? 'Kyllä' : 'Ei'; // Muista käyttää oikeaa ID:tä
-
-        // Hae valittu genre-arvo
+        const replayedValue = document.getElementById('replayed').checked ? 'Kyllä' : 'Ei';
         const genreValue = document.querySelector('input[name="genre"]:checked')?.value || "Ei valittu";
         
-        const releaseYearValue = document.getElementById('releaseYear').value;
+        // Muunna päivämäärä muotoon pp.kk.vvvv
+        const releaseDateValue = formatDateToFinnish(document.getElementById('releaseDate').value);
+        
         const developerValue = document.getElementById('developer').value;
         const platformValue = document.getElementById('platform').value;
         const engineValue = document.getElementById('engine').value;
@@ -26,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Aseta arvot popup-ruutuun
         nameDisplay.textContent = nameValue;
-        replayedDisplay.textContent = replayedValue; // Aseta replayedDisplay-ruutuun
+        replayedDisplay.textContent = replayedValue;
         genreDisplay.textContent = genreValue;
-        releaseYearDisplay.textContent = releaseYearValue;
+        releaseDateDisplay.textContent = releaseDateValue;
         developerDisplay.textContent = developerValue;
         platformDisplay.textContent = platformValue;
         engineDisplay.textContent = engineValue;
