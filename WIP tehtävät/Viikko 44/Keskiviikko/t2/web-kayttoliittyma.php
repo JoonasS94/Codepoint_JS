@@ -17,7 +17,7 @@
 
 <?php
     // Login details to access SQL-server.
-    $host= "localhost"; 
+    $host = "localhost"; 
     $username = "root"; 
     $database = "tilavaraus"; 
     $password = "";
@@ -29,7 +29,52 @@
     } 
     // Error message if failure in login details.
     catch(PDOException $e) { echo "<p>".$e->getMessage()."<p>"; } 
-    
+
+    // Lisää uusi tila
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['tilan_nimi']) && !empty($_POST['tilan_nimi'])) {
+        $tilan_nimi = $_POST['tilan_nimi'];
+
+        // Etsi pienin vapaa ID
+        $find_min_free_id = "SELECT MIN(t1.id + 1) AS next_free_id
+                             FROM tilat t1
+                             LEFT JOIN tilat t2 ON t1.id + 1 = t2.id
+                             WHERE t2.id IS NULL";
+        $query = $yhteys->prepare($find_min_free_id);
+        $query->execute();
+        $next_free_id = $query->fetchColumn();
+
+        // Asetetaan uusi ID manuaalisesti
+        $sql_lause = "INSERT INTO tilat (id, tilan_nimi) VALUES (:id, :tilan_nimi)";
+        try {
+            $query = $yhteys->prepare($sql_lause);
+            $query->bindParam(':id', $next_free_id);
+            $query->bindParam(':tilan_nimi', $tilan_nimi);
+            $query->execute();
+            // Ohjataan käyttäjä takaisin sivulle
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit(); // Lopetetaan nykyinen skripti
+        } catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+        }
+    }
+
+    // Poista tila
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['poista_tila_id']) && !empty($_POST['poista_tila_id'])) {
+        $poista_tila_id = $_POST['poista_tila_id'];
+
+        $sql_lause = "DELETE FROM tilat WHERE id = :id";
+        try {
+            $query = $yhteys->prepare($sql_lause);
+            $query->bindParam(':id', $poista_tila_id);
+            $query->execute();
+            // Ohjataan käyttäjä takaisin sivulle
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit(); // Lopetetaan nykyinen skripti
+        } catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+        }
+    }
+
     // Get all names and IDs from tilat table
     $sql_lause = "SELECT * FROM tilat"; 
     try { 
@@ -42,9 +87,9 @@
     $result = $query->fetchAll();
 
     // Print IDs and names from tilat table.
-    echo "<ul><p>Tilat: ID - Tilan nimi</p>";
+    echo "<ul><p>TILAT</p>";
     foreach($result as $tila) { 
-        echo "<li>ID: " . $tila['id'] . " - " . $tila['tilan_nimi'] . "</li>"; 
+        echo "<li>ID: " . $tila['id'] . "*****Tilan nimi: " . $tila['tilan_nimi'] . "</li>";
     }
     echo "</ul>";
 
@@ -60,9 +105,9 @@
     $result = $query->fetchAll();
 
     // Print names from varaajat table.
-    echo "<ul><p>Varaajat: ID - Varaajan nimi</p>";
+    echo "<ul><p>VARAAJAT</p>";
     foreach($result as $varaaja) {
-        echo "<li>ID: " . $varaaja['id'] . " - " . $varaaja['varaajan_nimi'] . "</li>";  
+        echo "<li>ID: " . $varaaja['id'] . "*****Varaajan nimi: " . $varaaja['varaajan_nimi'] . "</li>";
     }
     echo "</ul>";
 
@@ -78,14 +123,31 @@
     $result = $query->fetchAll();
 
     // Print dates from varaukset table.
-    echo "<ul><p>Varaukset: ID - Varattu tila ID - Varaajan ID - Varauspaiva</p>";
+    echo "<ul><p>VARAUKSET</p>";
     foreach($result as $varaukset) { 
-        echo "<li>ID: " . $varaukset['id'] . " - " . $varaukset['tila'] . " - " . $varaukset['varaaja'] . " - " . $varaukset['varauspaiva'] . "</li>"; 
+        echo "<li>ID: " . $varaukset['id'] . "*****Tila ID: " . $varaukset['tila'] . "*****Varaajan ID: " . $varaukset['varaaja'] . "*****Varauspäivä: " . $varaukset['varauspaiva'] . "</li>"; 
     }
     echo "</ul>";
 ?>
 
-<h1>Tervetuloa!</h1>
+<!-- Lomake uuden tilan lisäämiseksi -->
+<h2>Lisää uusi tila:</h2>
+<form method="POST" action="">
+    <label for="tilan_nimi">Tilan nimi:</label>
+    <input type="text" id="tilan_nimi" name="tilan_nimi" required>
+    <button type="submit">Lisää tila</button>
+</form>
+
+<!-- Lomake tilan poistamiseksi -->
+<h2>Poista tila:</h2>
+<form method="POST" action="">
+    <label for="poista_tila_id">Tilan ID:</label>
+    <input type="number" id="poista_tila_id" name="poista_tila_id" required>
+    <button type="submit">Poista tila</button>
+</form>
+
+<h1>Tämä on jo perinteistä HMTL:ää.</h1>
+<h1>- Joonas</h1>
 
 </body>
 </html>
