@@ -27,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const releaseDateValue = formatDateToFinnish(document.getElementById('releaseDate').value);
         
         const developerValue = document.getElementById('developer').value;
-
         const platformValue = document.getElementById('platform').value;
-        
         const engineValue = document.getElementById('engine').value;
+        
+        // Lisää Metacritic-arvosanaan "/100"
         const ratingValue = document.getElementById('review').value;
+        const formattedRating = ratingValue ? `${ratingValue}/100` : "Ei arvosanaa";
 
         // Aseta arvot popup-ruutuun
         nameDisplay.textContent = nameValue;
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         developerDisplay.textContent = developerValue;
         platformDisplay.textContent = platformValue;
         engineDisplay.textContent = engineValue;
-        ratingDisplay.textContent = ratingValue;
+        ratingDisplay.textContent = formattedRating;
 
         // Näytä popup-ruutu
         popupBox.style.display = 'block';
