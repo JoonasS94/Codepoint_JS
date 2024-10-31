@@ -351,13 +351,13 @@ label {
 
 input[type="checkbox"]
 {
-    margin-right: 96.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
+    margin-right: 97.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
     margin-bottom: 20px;
 }
 
 input[type="radio"]
 {
-    margin-right: 96.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
+    margin-right: 97.5%; /* Lisää tilaa checkboxin ja tekstin väliin */
     margin-bottom: 20px;
 }
 
